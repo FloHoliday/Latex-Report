@@ -1,0 +1,38 @@
+% Loads all settings and packages from preamble.tex
+\input{preamble.tex}
+
+\begin{document}
+
+% Create the title page
+\maketitle
+\thispagestyle{empty} % No page number on the title page
+\newpage
+
+% Table of Contents
+\tableofcontents
+\newpage
+
+% --- The actual content starts here ---
+
+\section{Introduction}
+This is the introduction text. \lipsum[1-2]
+
+\section{Main Part}
+This section covers the core topic. \lipsum[3-4]
+
+\subsection{A Sub-chapter}
+Here, we go into more detail. \lipsum[5]
+
+% Example for an image
+% \begin{figure}[h!]
+%     \centering
+%     % You would need to place an image in the 'images' folder
+%     \includegraphics[width=0.7\textwidth]{images/your-image.png}
+%     \caption{This is an example figure.}
+%     \label{fig:example}
+% \end{figure}
+
+\section{Conclusion}
+This is the summary of the work. \lipsum[6]
+
+\end{document}

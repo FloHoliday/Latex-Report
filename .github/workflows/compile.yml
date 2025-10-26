@@ -1,0 +1,23 @@
+name: Build LaTeX PDF
+
+on:
+  push: # This action runs on every "git push"
+    branches: [ "main" ]
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Compile LaTeX to PDF
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: main.tex # Tell the compiler which file is the main one
+
+      - name: Upload PDF as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: PDF-Report # The name of the download file
+          path: main.pdf  # The compiled PDF file to be uploaded
