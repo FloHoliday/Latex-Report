@@ -1,0 +1,6 @@
+services:
+  compiler:
+    build: .
+    volumes:
+      - ./:/workdir
+    container_name: latex_compiler
